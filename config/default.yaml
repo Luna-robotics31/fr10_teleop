@@ -1,0 +1,196 @@
+robot:
+  urdf: assets/fr10/fr10_gripper.urdf
+  arm_joints:
+  - j1
+  - j2
+  - j3
+  - j4
+  - j5
+  - j6
+  flange_frame: flange
+  tcp_offset:
+  - 0.0
+  - 0.0
+  - 0.13
+  - 0.0
+  - 0.0
+  - 0.0
+  home_deg:
+  - 14.0
+  - -90.0
+  - -115.0
+  - -65.0
+  - 90.0
+  - 14.0
+  joint_limit_margin_deg: 3.0
+  max_velocity_deg_s:
+  - 80.0
+  - 80.0
+  - 100.0
+  - 150.0
+  - 150.0
+  - 180.0
+  max_acceleration_deg_s2:
+  - 300.0
+  - 300.0
+  - 400.0
+  - 600.0
+  - 600.0
+  - 800.0
+control:
+  rate_hz: 60.0
+  servo_rate_hz: 125.0
+  speed_scale: 1.0
+  home_speed_deg_s: 25.0
+  home_on_start: true
+  tracking_gain: 15.0
+  state_timeout_s: 0.5
+  tracking_error_limit_deg: 30.0
+  soft_command_lead_deg: 10.0
+  max_command_lead_deg: 22.0
+  stall_timeout_s: 1.5
+  auto_start: false
+ik:
+  position_weight: 100.0
+  rotation_weight: 5.0
+  posture_weight: 0.0001
+  smoothness_weight: 0.1
+  max_step_deg: 10.0
+  max_iterations: 40
+  tolerance: 1.0e-06
+mapping:
+  position_scale: 1.0
+  rotation_scale: 1.0
+  track_orientation: true
+  orientation_mode: absolute
+  engage_tolerance_deg: 35.0
+  hand_offset_rpy_deg:
+  - 0.0
+  - 0.0
+  - 0.0
+  reference: head_yaw
+  yaw_offset_deg: auto
+  smoothing_time_s: 0.12
+  smoothing_fast_speed_m_s: 0.25
+  smoothing_fast_turn_deg_s: 90.0
+  max_linear_speed: 0.6
+  max_angular_speed_deg: 150.0
+  jump_position_m: 0.15
+  jump_rotation_deg: 50.0
+  workspace:
+    x:
+    - 0.2
+    - 1.15
+    y:
+    - -0.75
+    - 0.75
+    z:
+    - 0.02
+    - 1.2
+    max_reach: 1.25
+    min_radius: 0.25
+xr:
+  input_mode: controller
+  hand: right
+  display_mode: auto
+  display_fps: 30.0
+  clutch_on: 0.6
+  clutch_off: 0.3
+  stale_timeout_s: 0.4
+  fist_closed_ratio: 1.25
+  fist_open_ratio: 1.5
+  clutch_engage_delay_s: 0.1
+  clutch_release_delay_s: 0.12
+  gripper_source: driving_hand_fist
+  hand_bus_port: 5560
+  gripper_fist_open_ratio: 1.8
+  gripper_fist_closed_ratio: 1.15
+  gripper_pinch_open_m: 0.08
+  gripper_pinch_closed_m: 0.02
+  gripper_pinch_on_m: 0.03
+  gripper_pinch_off_m: 0.05
+  gripper_pinch_hold_s: 0.08
+  pinch_open_m: 0.09
+  pinch_closed_m: 0.02
+  cert_file: null
+  key_file: null
+gripper:
+  enabled: true
+  mode: analog
+  toggle_threshold: 0.7
+  max_rate: 4.0
+image:
+  enabled: true
+  host: 127.0.0.1
+  port: 55555
+  shape:
+  - 480
+  - 640
+  binocular: false
+orbbec:
+  serial: null
+  width: 640
+  height: 480
+  fps: 30
+  jpeg_quality: 80
+  frame_timeout_ms: 1000
+sim:
+  host: 127.0.0.1
+  state_port: 5556
+  command_port: 5557
+  physics_hz: 200.0
+  render_every: 4
+  command_timeout_s: 0.5
+  table_height: 0.75
+  cube_size: 0.05
+  camera:
+    eye:
+    - -0.85
+    - -0.6
+    - 1.25
+    target:
+    - 0.6
+    - 0.0
+    - 0.1
+    focal_length_mm: 16.0
+    rate_hz: 30.0
+    jpeg_quality: 80
+fairino:
+  ip: 192.168.58.2
+  rpc_port: 20003
+  sdk_path: ~/Projects/FoundationPose/cube_pick/robot/fairino_driver
+  servo_transport: udp
+  use_servo_move_start_end: true
+  switch_to_auto_mode: true
+  enable_on_connect: true
+  reset_errors_on_connect: false
+  rpc_timeout_s: 5.0
+  max_queue_points: 10
+  gripper:
+    enabled: true
+    index: 2
+    open_percent: 0.0
+    closed_percent: 100.0
+    speed_percent: 100
+    force_percent: 67
+    max_time_ms: 2000
+    min_interval_s: 0.4
+    resolution_percent: 10.0
+    mode: proportional
+    close_above: 0.6
+    open_below: 0.4
+    activate_before_move: false
+    wait_for_move: false
+    activation_timeout_s: 20.0
+    separate_sdk_connection: false
+    use_process: true
+    pause_arm_for_moves: true
+    pause_cooldown_s: 1.0
+    still_band_percent: 4.0
+    pause_timeout_s: 8.0
+recording:
+  directory: data
+  task: fr10_teleop
+  rate_hz: 30.0
+  save_images: true
+  jpeg_quality: 90

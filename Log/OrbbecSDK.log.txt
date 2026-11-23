@@ -1,0 +1,46 @@
+[11/16 14:33:47.224977][info][28989][HostTimestampProvider.cpp:36] Update clock type to: realtime(0)
+[11/16 14:33:47.225179][info][28989][LinuxUsbPal.cpp:334] Create PollingDeviceWatcher!
+[11/16 14:33:47.225183][info][28989][DeviceManager.cpp:25] Current found device(s): (0)
+[11/16 14:33:47.225185][info][28989][DeviceManager.cpp:488] Enable net device enumeration: true
+[11/16 14:33:48.226608][info][28989][DeviceManager.cpp:25] Current device(s) list: (0)
+[11/16 14:34:05.828137][info][29123][HostTimestampProvider.cpp:36] Update clock type to: realtime(0)
+[11/16 14:34:05.828342][info][29123][LinuxUsbPal.cpp:334] Create PollingDeviceWatcher!
+[11/16 14:34:05.828345][info][29123][DeviceManager.cpp:25] Current found device(s): (0)
+[11/16 14:34:05.828347][info][29123][DeviceManager.cpp:488] Enable net device enumeration: true
+[11/16 14:34:06.843923][info][29123][DeviceManager.cpp:25] Current device(s) list: (0)
+[11/16 14:34:18.757051][info][29282][HostTimestampProvider.cpp:36] Update clock type to: realtime(0)
+[11/16 14:34:19.268800][info][29282][LinuxUsbPal.cpp:334] Create PollingDeviceWatcher!
+[11/16 14:34:19.268825][info][29282][DeviceManager.cpp:25] Current found device(s): (1)
+[11/16 14:34:19.268827][info][29282][DeviceManager.cpp:34] 	- Name: Gemini2, PID: 0x0670, SN/ID: AY6G65301FE, Connection: USB3.0
+[11/16 14:34:19.268829][info][29282][DeviceManager.cpp:488] Enable net device enumeration: true
+[11/16 14:34:20.276899][info][29282][DeviceManager.cpp:25] Current device(s) list: (1)
+[11/16 14:34:20.276918][info][29282][DeviceManager.cpp:34] 	- Name: Gemini2, PID: 0x0670, SN/ID: AY6G65301FE, Connection: USB3.0
+[11/16 14:34:20.277022][warning][29282][PropertyServer.cpp:120] [AY6G65301FE] Not added to property map, property not found in OBPropertyBaseInfoMap, id=108
+[11/16 14:34:20.277066][warning][29282][PropertyServer.cpp:120] [AY6G65301FE] Not added to property map, property not found in OBPropertyBaseInfoMap, id=5003
+[11/16 14:34:20.289490][info][29282][DeviceManager.cpp:200] Device created successfully! Name: Gemini 2, PID: 0x0670, SN/ID: AY6G65301FE FW: 1.4.92
+[11/16 14:34:20.289529][info][29282][Pipeline.cpp:54] [AY6G65301FE] Pipeline created with device: {name: Gemini 2, sn: AY6G65301FE}, @0x5EB29BF18840
+[11/16 14:34:20.296860][info][29282][Pipeline.cpp:228] [AY6G65301FE] Check and set config done!
+[11/16 14:34:20.297333][info][29282][Pipeline.cpp:266] [AY6G65301FE] Try to start streams!
+[11/16 14:34:20.297337][info][29282][VideoSensor.cpp:62] [AY6G65301FE] Try to start stream: {type: Color, format: MJPG, width: 640, height: 480, fps: 30}
+[11/16 14:34:20.297340][info][29282][SensorBase.cpp:224] [AY6G65301FE] Stream state changed from STOPPED to STARTING@Color
+[11/16 14:34:20.297341][info][29282][VideoSensor.cpp:131] [AY6G65301FE] Start backend stream: {type: Color, format: MJPG, width: 640, height: 480, fps: 30}
+[11/16 14:34:20.303451][info][29282][Pipeline.cpp:293] [AY6G65301FE] Start streams done!
+[11/16 14:34:20.303452][info][29282][Pipeline.cpp:250] [AY6G65301FE] Pipeline start done!
+[11/16 14:34:20.430126][info][29351][SensorBase.cpp:224] [AY6G65301FE] Stream state changed from STARTING to STREAMING@Color
+[11/16 14:34:25.463415][info][29351][VideoSensor.cpp:181] [AY6G65301FE] Color backend frame callback, frameRate=30.200676fps
+[11/16 14:34:25.463507][info][29363][SensorBase.cpp:415] [AY6G65301FE] Color Streaming... frameRate=30.218687fps
+[11/16 14:34:30.496937][info][29351][VideoSensor.cpp:181] [AY6G65301FE] Color backend frame callback, frameRate=30.001987fps
+[11/16 14:34:30.497012][info][29363][SensorBase.cpp:415] [AY6G65301FE] Color Streaming... frameRate=29.996027fps
+[11/16 14:34:32.297040][info][29282][Pipeline.cpp:367] [AY6G65301FE] Try to stop pipeline!
+[11/16 14:34:32.297050][info][29282][Pipeline.cpp:343] [AY6G65301FE] Try to stop streams!
+[11/16 14:34:32.297057][info][29282][SensorBase.cpp:224] [AY6G65301FE] Stream state changed from STREAMING to STOPPING@Color
+[11/16 14:34:32.339758][info][29282][SensorBase.cpp:224] [AY6G65301FE] Stream state changed from STOPPING to STOPPED@Color
+[11/16 14:34:32.339840][info][29282][Pipeline.cpp:357] [AY6G65301FE] Sensor stream stopped, sensorType=Color
+[11/16 14:34:32.339841][info][29282][Pipeline.cpp:363] [AY6G65301FE] Stop streams done!
+[11/16 14:34:32.340232][info][29282][Pipeline.cpp:393] [AY6G65301FE] Stop pipeline done!
+[11/16 14:34:32.340259][info][29282][Pipeline.cpp:65] [AY6G65301FE] Pipeline destroyed! @0x5EB29BF18840
+[11/16 14:34:32.340314][info][29282][SensorBase.cpp:61] [AY6G65301FE] SensorBase is destroyed
+[11/16 14:34:32.354976][info][29282][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[11/16 14:34:32.354978][info][29282][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done
+[11/16 14:34:32.365111][info][29282][ObLibuvcDevicePort.cpp:87] uvc_close done.
+[11/16 14:34:32.365113][info][29282][ObLibuvcDevicePort.cpp:88] ~ObLibuvcDevicePort done

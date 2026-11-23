@@ -1,0 +1,3 @@
+-r requirements.txt
+# SDK v2 distribution; the Python module is named pyorbbecsdk.
+pyorbbecsdk2>=2.0,<3

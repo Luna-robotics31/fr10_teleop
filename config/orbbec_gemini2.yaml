@@ -1,0 +1,17 @@
+# Real FR10 with the Gemini 2 color stream from camera_fr10.py.
+# This file overlays dataclass defaults; set your robot IP and SDK path with --set.
+xr:
+  display_mode: ego
+image:
+  enabled: true
+  host: 127.0.0.1
+  port: 55555
+  shape: [480, 640]
+  binocular: false
+orbbec:
+  serial: null
+  width: 640
+  height: 480
+  fps: 30
+  jpeg_quality: 80
+  frame_timeout_ms: 1000

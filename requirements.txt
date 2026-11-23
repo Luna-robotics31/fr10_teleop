@@ -1,0 +1,6 @@
+# Install Pinocchio with CasADi bindings and CasADi through conda-forge first;
+# see README.md. TeleVuer is installed separately.
+numpy<2
+PyYAML>=6
+pyzmq>=25
+opencv-python>=4.8
